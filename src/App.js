@@ -23,7 +23,7 @@ class App extends React.Component{
       tasks: prev.tasks.concat(document.querySelector('input').value)
     }), ()=>{
       let ls = localStorage.getItem('tasks').split(',')
-       if (ls[0] == '') ls.shift()
+       if (ls[0] === '') ls.shift()
       ls.push(document.querySelector('input').value)
       localStorage.setItem('tasks', ls)
     })
